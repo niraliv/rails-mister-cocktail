@@ -5,8 +5,8 @@ before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
   end
 
   def show
-  end
 
+  end
 
 
   def new
