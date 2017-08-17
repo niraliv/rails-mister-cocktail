@@ -2,6 +2,16 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
+puts "creating cocktail"
+  Cocktail.destroy_all
+  Cocktail.create!(name: 'Mojito')
+  Cocktail.create!(name: 'Margarita')
+
+puts "all done"
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
