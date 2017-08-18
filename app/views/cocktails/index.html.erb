@@ -2,8 +2,7 @@
 <% @cocktails.each do |cocktail| %>
   <p><%= link_to cocktail.name, cocktail_path(cocktail) %><p>
   <%= link_to 'Show', cocktail %>
-  <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
-  <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 <% end  %>
 
 <p><%= link_to 'New Cocktail', new_cocktail_path %></p>
