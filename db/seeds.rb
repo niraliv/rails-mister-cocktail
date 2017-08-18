@@ -2,11 +2,11 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-puts "creating cocktail"
-  Cocktail.destroy_all
-  Cocktail.create!(name: 'Mojito')
-  Cocktail.create!(name: 'Margarita')
-  Cocktail.create!(name: 'Martini')
+# puts "creating cocktail"
+#   Cocktail.destroy_all
+#   Cocktail.create!(name: 'Mojito')
+#   Cocktail.create!(name: 'Margarita')
+#   Cocktail.create!(name: 'Martini')
 
 puts "all done"
 

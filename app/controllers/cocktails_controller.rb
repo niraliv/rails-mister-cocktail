@@ -1,11 +1,12 @@
 class CocktailsController < ApplicationController
-before_action :set_cocktail, only: [:show]
+  before_action :set_cocktail, only: [:show]
+
   def index
   @cocktails = Cocktail.all
   end
 
   def show
-
+    @dose = Dose.new
   end
 
 
@@ -24,13 +25,13 @@ before_action :set_cocktail, only: [:show]
 
 
 
-   private
+  private
 
   def set_cocktail
     @cocktail = Cocktail.find(params[:id])
   end
 
   def cocktail_params
-      params.require(:cocktail).permit(:name)
+      params.require(:cocktail).permit(:name, :photo, :photo_cache)
   end
 end

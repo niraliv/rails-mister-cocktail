@@ -1,8 +1,33 @@
+<h1 class="text-center">Your cocktail list</h1>
 
-<% @cocktails.each do |cocktail| %>
-  <p><%= link_to cocktail.name, cocktail_path(cocktail) %><p>
-  <%= link_to 'Show', cocktail %>
+<div class="text-center padded">
+  <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+</div>
 
-<% end  %>
+<div class="container text-center">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
 
-<p><%= link_to 'New Cocktail', new_cocktail_path %></p>
+          <% if cocktail.photo %>
+            <div class="card-header" style="background-image: url('<%= cl_image_path cocktail.photo.url %>')">
+
+            </div>
+          <% else %>
+            <div class="card-header" style="background-image: url('https://unsplash.it/200/300')">
+            </div>
+          <% end %>
+          <div class="card-body">
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
